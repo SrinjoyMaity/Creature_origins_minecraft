@@ -1,0 +1,43 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:fall_flying"
+        },
+        "if_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:add_velocity",
+				"y": 2
+			},
+			{    
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:resistance",
+				"amplifier": 3,
+				"duration": 100,
+				"show_particles": false
+            }
+        }
+		]
+        },
+        "else_action": {
+            "type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:resistance",
+				"amplifier": 3,
+				"duration": 100,
+				"show_particles": false
+            }
+        }
+    },
+    "cooldown": 400,
+    "hud_render": {
+        "should_render": true,
+		"bar_index": 4
+    },
+	 "name": "nerves of steel",
+	"description": "while flying you gain a boost that will propel you upward and gain a lot of armor, while on land you only gain the armor"
+}

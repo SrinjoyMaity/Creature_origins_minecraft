@@ -1,0 +1,18 @@
+{
+	"type": "origins:multiple",
+	"color": {
+		"type": "origins:model_color",
+		"red": 0.662745098,
+		"green": 0.874509804,
+		"blue": 0.937254902,
+		"alpha": 0.8
+	},
+	"particle": {
+		 "type": "origins:particle",
+		"particle": "minecraft:firework",
+		"frequency": 4
+	},
+	"name": "Starlike composition",
+	"description": "you are slightly transparent and sparkle like a star "
+}
+	

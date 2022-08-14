@@ -1,0 +1,19 @@
+{
+   "type": "origins:action_over_time",
+    "entity_action": {
+         "type": "origins:apply_effect",
+    "effect": {
+        "effect": "minecraft:wither",
+        "duration": 100,
+        "amplifier": 0
+    }
+    },
+    "interval": 100,
+    "condition": {
+        "type": "origins:food_level",
+    "comparison": "<=",
+    "compare_to": 6
+    },
+	"name": "unstable hunger",
+	"description": "if you hunger falls below 3 , you start to wither as your star-like body becomes unstable "
+}

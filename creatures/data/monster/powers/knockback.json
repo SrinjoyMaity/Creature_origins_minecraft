@@ -1,0 +1,17 @@
+{
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:snowball",
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+		"bar_index": 5
+    },
+    "count": 30,
+    "interval": 1,
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    },
+	"name": "snowball fight",
+	"description": "quickly fire 30 snowballs knocking back enemies"
+}

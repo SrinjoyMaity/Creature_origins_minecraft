@@ -1,0 +1,11 @@
+{
+	"type": "origins:attribute",
+	"modifier": {
+		"attribute": "minecraft:generic.max_health",
+		"operation": "addition",
+		"value": -10,
+		"name": "sand shark health"
+	},
+	"name": "poor defense",
+	"description": "evolved for ambush, you are not very defensive having only 5 hearts"
+}

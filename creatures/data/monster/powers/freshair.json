@@ -1,0 +1,11 @@
+{
+  "type": "origins:prevent_sleep",
+  "block_condition": {
+    "type": "origins:height",
+    "comparison": "<",
+    "compare_to": 86
+  },
+  "message": "you feel uneasy and couldnot sleep",
+  "name": "fresh air",
+	"description": "you can only sleep at a y-level above 86"
+}

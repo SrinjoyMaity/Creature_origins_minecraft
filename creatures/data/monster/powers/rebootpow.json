@@ -1,0 +1,85 @@
+{
+	"type": "origins:multiple",
+	"jump": {
+    "type": "origins:modify_jump",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -1
+    }
+	},
+	"slow": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 3,
+		"max_stacks": 3,
+		"duration_per_stack": 10,
+		"effects": [
+        {
+            "effect": "minecraft:slowness",
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": true,
+			"amplifier": 6
+        }
+		]
+	},
+	"life": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": -12,
+			"name": "reboot health"
+	}
+	},
+	"item": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:bow"
+			},
+			"inverted":true
+		}
+	},
+	"meter": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 15,
+		"start_value": 15,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 2
+		},
+		"min_action": {
+			"type": "origins:and",
+			"actions":[
+				{
+					 "type": "origins:execute_command",
+					 "command": "origin set @s origins:origin monster:nyandroid"
+				}
+			]
+		}
+	},
+	"drop":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "monster:rebootpow_meter",
+			"change": -1
+		},
+		"interval": 20
+	},
+	"respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:execute_command",
+		"command": "origin set @s origins:origin monster:nyandroid"
+    },
+	"entity_action_gained": {
+         "type": "origins:heal",
+		"amount": 8
+    }
+	},
+	"name": "Rebooting",
+	"description": "please wait"
+}

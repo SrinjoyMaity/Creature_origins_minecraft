@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"monster:frostpounce",
+		"monster:healthy",
+		"monster:knockback",
+		"monster:berry",
+		"monster:craftice",
+		"monster:hungry",
+		"monster:combustfur",
+		"monster:winterwear"
+		
+	],
+	"icon": "minecraft:snowball",
+	"order": 4,
+	"impact": 1,
+	"name": "Ancient yeti",
+	"description": "A monster from the mountains assumed to be extinct a long time ago, ferocious to anyone trying to climb the peaks"
+}

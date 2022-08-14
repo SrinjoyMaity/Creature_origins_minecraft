@@ -1,0 +1,74 @@
+{
+	"type": "origins:multiple",
+	"earth": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:block_action_at",
+					"block_action": {
+						"type": "origins:offset",
+						"action": {
+							"type": "origins:add_block",
+							"block": "minecraft:grass_block"
+						},
+						"y": -2
+					}
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "monster:earthmag_resource",
+					"change": -1
+				}
+			]
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": false
+		},
+		"condition": {
+			 "type": "origins:resource",
+			"resource": "monster:earthmag_resource",
+			"comparison": ">",
+			"compare_to": 0
+        
+       }
+	},
+	"resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"start_value": 3,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 8
+		}
+	},
+	"replen": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "monster:earthmag_resource",
+			"change": 1
+		},
+		"interval": 200,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "monster:earthmag_resource",
+			"comparison": "<",
+			"compare_to": 3
+		}
+    },
+	"respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:change_resource",
+		"resource": "monster:earthmag_resource",
+		"change": 3
+		}
+	},
+	"name": "earth magic",
+	"description": "spawn a grass block under your leg, you can store 3 charges of this ability"
+}
+ 

@@ -1,0 +1,154 @@
+{
+	"type": "origins:multiple",
+	"inksac": 
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:delay",
+		"ticks": 20,
+		"action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s ink_sac 1"
+				},
+				{
+					"type": "origins:feed",
+					"food": 4,
+					"saturation": 0.8
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.player.burp"
+				}
+			]
+		}
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:ink_sac"
+					}
+				}
+			},
+			{
+				"type": "origins:food_level",
+				"comparison": "<",
+				"compare_to": 20
+			}
+		]
+	},
+	"cooldown": 30,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "key.use",
+		"continuous": true
+	},
+	"hidden": true
+},
+"glowinksac":{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:delay",
+		"ticks": 20,
+		"action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "clear @s glow_ink_sac 1"
+				},
+				{
+					"type": "origins:feed",
+					"food": 4,
+					"saturation": 0.2
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.player.burp"
+				},
+				 {
+				"type": "origins:apply_effect",
+				"effect": {
+				"effect": "minecraft:night_vision",
+				"duration": 400,
+				"amplifier": 0
+				}
+				 }
+				
+				]
+			
+			
+		}
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:glow_ink_sac"
+					}
+				}
+			}
+		]
+	},
+	"cooldown": 30,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "key.use",
+		"continuous": true
+	},
+	"hidden": true
+},
+"meat":{
+  "type": "origins:prevent_item_use",
+  "item_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:or",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "origins:meat"
+            }
+          },
+          {
+            "type": "origins:meat"
+          }
+        ],
+        "inverted": true
+      },
+      {
+        "type": "origins:food"
+      },
+      {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins:ignore_diet"
+        },
+        "inverted": true
+      }
+    ]
+  }
+
+	},
+"name": "unhealthy appetite",
+	"description": "due to the lack of plantlife in the deep , you have adapted to a diet of meat and ink sacs, glow ink sacs even give you night vision for a short time  "
+}

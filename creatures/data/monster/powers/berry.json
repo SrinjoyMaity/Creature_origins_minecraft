@@ -1,0 +1,49 @@
+{
+	"type": "origins:multiple",
+"glow": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:glow_berries"
+			}
+		},
+		 "saturation_modifier": {
+        "name": "Increased saturation points",
+        "operation": "addition",
+        "value": 2
+		},
+		"entity_action": {
+		"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:haste",
+				"duration": 200,
+				"amplifier": 0
+			}
+		}
+	},
+	"sweet": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:sweet_berries"
+			}
+		},
+		 "saturation_modifier": {
+        "name": "Increased saturation points",
+        "operation": "addition",
+        "value": 2
+		},
+		"entity_action": {
+		"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:absorption",
+				"duration": 100,
+				"amplifier": 1
+			}
+		}
+	},
+	"name": "berry collector",
+	"description": "though you can eat anything , berries are your favourite food and grants you buffs .sweet berries give you absorption while glow berry gives you haste "
+}

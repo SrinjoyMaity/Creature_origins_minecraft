@@ -1,0 +1,62 @@
+{
+	"type": "origins:multiple",
+	"launch":{
+		"type": "origins:launch",
+		"cooldown": 100,
+		"hud_render": {
+			"bar_index": 3
+		},
+		"speed": 1.1,
+		"key": {
+			"key": "key.origins.primary_active",
+			"continuous": true
+		},
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:and",
+				"conditions":[
+					{
+						"type": "origins:in_tag",
+						"tag": "monster:sandlike"
+					},
+					{
+						"type": "origins:offset",
+						"condition": {
+							"type": "origins:in_tag",
+							"tag": "monster:sandlike"
+						},
+					"y": 1
+					}
+				]
+			}
+		}
+	},
+	"land":{
+		 "type": "origins:action_on_land",
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 2,
+			"bientity_action": {
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:damage",
+					"amount": 6,
+					"source": {
+						"name": "player",
+						"bypasses_armor": true
+					}
+				}
+			}
+				
+        },
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": ">=",
+			"compare_to": 3
+		}
+
+	},
+	"name": "pounce",
+	"description": "you pounce on an unsuspecting victim, can only be done in burrowed form , you also deal damage while landing on a target"
+}

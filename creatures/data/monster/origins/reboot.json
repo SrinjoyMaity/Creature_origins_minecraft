@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"monster:rebootpow"
+	],
+	"icon": "minecraft:cod",
+	"order": 4,
+	"impact": 1,
+	"unchoosable": true,
+	"name": "Nyandroid reboot",
+	"description": " you are going to reboot back to nyandroid, you cannot move or use item except a bow"
+}

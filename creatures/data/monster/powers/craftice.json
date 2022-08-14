@@ -1,0 +1,43 @@
+{
+	"type": "origins:multiple",
+	"packed": {
+		"type": "origins:recipe",
+		"recipe": {
+			"id": "monster:packed_in_ice",
+			"type": "minecraft:crafting_shaped",
+			"pattern": [
+				"##",
+				"##"
+			],
+			 "key": {
+			"#": {
+					"item": "minecraft:ice"
+				}
+			},
+			"result": {
+				"item": "minecraft:packed_ice"
+			}
+		}
+	},
+	"blue":	{
+    "type": "origins:recipe",
+    "recipe": {
+        "id": "monster:bluest_ice",
+        "type": "minecraft:crafting_shaped",
+		"pattern": [
+        "##",
+        "##"
+		],
+         "key": {
+        "#": {
+                "item": "minecraft:packed_ice"
+            }
+		 },
+        "result": {
+            "item": "minecraft:blue_ice"
+        }
+    }
+},
+"name": "igloo maker",
+	"description": "you can craft packed ice with 4 ice blocks in a square and do the same for blue ice"
+}

@@ -1,0 +1,9 @@
+{
+"type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": -2.0
+    },
+	"name": "pacifist",
+	"description": "you are a very empathic creature and try your best to not hit others too hard, you deal less damage and cannot crit"
+}	

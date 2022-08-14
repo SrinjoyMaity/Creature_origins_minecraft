@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_break_speed",
+    "block_condition": {
+       "type": "origins:in_tag",
+		"tag": "monster:sandlike"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 6
+    },
+	"name": "made for digging",
+	"description": "you can farm shovelable blocks almost instantly"
+}

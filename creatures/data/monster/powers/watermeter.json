@@ -1,0 +1,87 @@
+{	"type": "origins:multiple",
+	"meter": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 300,
+		"start_value": 300,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 1
+		},
+		"min_action": {
+			"type": "origins:and",
+			"actions":[
+				{
+					"type": "origins:damage",
+					"amount": 4,
+					"source": {
+						"name": "dryout",
+						"bypasses_armor": true
+					}
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "monster:watermeter_meter",
+					"change": 1
+				}
+			]
+		}
+	},
+	"swim":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "monster:watermeter_meter",
+			"change": 10
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:or",
+			"conditions":[
+			{
+			"type": "origins:fluid_height",
+			"fluid": "minecraft:water",
+			"comparison": ">",
+			"compare_to": 0
+			},
+			{
+				"type": "origins:in_rain"
+			}
+			]
+		}
+	},
+	"bottles": {
+		
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:change_resource",
+			"resource": "monster:watermeter_meter",
+			"change": 120
+    },
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:potion"
+        }
+    }
+	},
+	"drop":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "monster:watermeter_meter",
+			"change": -1
+		},
+		"interval": 20
+	},
+	"respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:change_resource",
+		"resource": "monster:watermeter_meter",
+		"change": 300
+    }
+	},
+	"name": "Need for water",
+	"description": "you can only live 5 minutes without water, drink water/potions from bottle or swim or stand in rain to get it back"
+}

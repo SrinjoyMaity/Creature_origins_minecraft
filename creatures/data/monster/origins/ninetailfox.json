@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"monster:earthmag",
+		"monster:mysticalfire",
+		"monster:grassspeed",
+		"monster:forestgift",
+		"monster:craftgrass",
+		"monster:foxbody",
+		"monster:voidfear",
+		"monster:undernourish",
+		"monster:dullfox"
+	],
+	"icon": "minecraft:sweet_berries",
+	"order": 4,
+	"impact": 2,
+	"name": "Nine-tailed fox",
+	"description": "considered to be the protector of the forest, nine-tailed fox use the forest magic to beat its opponents "
+}

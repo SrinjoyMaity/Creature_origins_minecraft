@@ -1,0 +1,5 @@
+{
+    "type": "origins:disable_regen",
+	"name": "Mortal wounds",
+	"description": "you do not regen health when your hunger is full"
+}

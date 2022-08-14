@@ -1,0 +1,25 @@
+
+{
+	"type":"origins:multiple",
+	"death": {
+		"type": "origins:prevent_death",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+				"type": "origins:execute_command",
+				"command": "origin set @s origins:origin monster:reboot"
+				}
+			]
+		}
+	},
+	"reborn":{
+    "type": "origins:action_on_callback",
+	"entity_action_gained": {
+         "type": "origins:heal",
+		"amount": 20
+    }
+	},
+	"name": "Reanimation protocol",
+	"description": "In case of a fatal situation instead of dying you go into a reboot state, your movement is greatly reduced and you cannot use any item except your weapons and a bow. after sometime you are returned back to normal state"
+}

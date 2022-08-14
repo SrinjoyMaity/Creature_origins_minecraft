@@ -1,0 +1,19 @@
+{
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:small_fireball",
+    "cooldown": 200,
+	"speed": 1,
+	"count": 5,
+	"interval": 3,
+	"divergence": 2,
+	"hud_render": {
+        "should_render": true,
+		"bar_index": 7
+    },
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    },
+	"name": "mystical fire",
+	"description": "launch mystical fire at your enemies that burns them "
+}

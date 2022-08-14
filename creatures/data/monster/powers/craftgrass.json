@@ -1,0 +1,20 @@
+{
+    "type": "origins:recipe",
+    "recipe": {
+		"id": "grass_crafting",
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            {
+                "item": "minecraft:grass"
+            },
+            {
+                "item": "minecraft:dirt"
+            }
+        ],
+        "result": {
+            "item": "minecraft:grass_block"
+        }
+    },
+"name": "meadow's price",
+	"description": "you can craft grass block with grass and dirt block"
+}

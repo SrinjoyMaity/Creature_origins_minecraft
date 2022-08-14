@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"monster:coldblooded",
+		"monster:heatheal",
+		"monster:resilient",
+		"monster:sprintliz",
+		"monster:fatigue",
+		"monster:tastybug",
+		"origins:carnivore",
+		"monster:mortalwound",
+		"monster:battlearmor"
+	],
+	"icon": "minecraft:iron_ingot",
+	"order": 4,
+	"impact": 3,
+	"name": "Armoured Basilisk",
+	"description": "Often used in warfare as powerful mounts due to their speed and defensive capabilities. this cold blooded creatures love warm areas and burning battlefields "
+}

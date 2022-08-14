@@ -1,0 +1,19 @@
+{
+	"type": "origins:multiple",
+	"fire": {
+		"type": "origins:fire_immunity"
+	},
+	"fall": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+				 "type": "origins:name",
+				 "name": "fall"
+		},
+		"modifier": {
+        "operation": "multiply_total",
+        "value": -0.9
+		}
+	},
+	"name": "adaptive scales",
+	"description": "you natural environment has made you adapt to extreme temperature and pressure, making you immune to fire and take 90% less fall damage"
+}

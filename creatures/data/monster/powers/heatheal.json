@@ -1,0 +1,80 @@
+{
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "key.origins.primary_active"
+		}
+	},
+	"heal": {
+			"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:heal",
+			"amount": 2
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:heatheal_toggle"
+		}
+	},
+	"reduce": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+		{
+			"type": "origins:change_resource",
+			"resource": "monster:coldblooded_meter",
+			"change": -20
+		},
+		{
+			"type": "origins:exhaust",
+			"amount": 1
+		}
+		]
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:heatheal_toggle"
+		}
+	},
+	"off": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+		"type": "origins:toggle",
+		"power": "monster:heatheal_toggle"    
+	},
+    "interval": 20,
+    "condition": {
+        "type": "origins:and",
+		"conditions": [
+		{
+			"type": "origins:power_active",
+			"power": "monster:heatheal_toggle"
+		},
+		{
+			"type": "origins:or",
+			"conditions": [
+			{
+				"type": "origins:resource",
+				"resource": "monster:coldblooded_meter",
+				"comparison": "<=",
+				"compare_to": 0
+			},
+			{
+				"type": "origins:relative_health",
+				"comparison": "==",
+				"compare_to": 1
+			}
+			]
+			
+		}
+		]
+    }
+	},
+	"name": "regenerative scale",
+	"description": "spend heat and food to heal yourself, doesnot work if you have no heat or you are at full health"
+}

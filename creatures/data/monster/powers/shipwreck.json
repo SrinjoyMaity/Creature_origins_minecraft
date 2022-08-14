@@ -1,0 +1,9 @@
+{
+  "type": "origins:modify_player_spawn",
+  "dimension": "minecraft:the_overworld",
+  "structure": "minecraft:shipwreck",
+  "spawn_strategy": "center",
+   "name": "sunken nest",
+   "description":"you spawn near a ship wreck, probably caused by you"
+  
+}

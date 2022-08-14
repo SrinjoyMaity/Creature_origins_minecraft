@@ -1,0 +1,24 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:feed",
+		"food": 1,
+		"saturation": 0
+    },
+    "interval": 20,
+    "condition": {
+        "type": "origins:and",
+		"conditions":[
+		{
+			"type": "origins:exposed_to_sun"
+		},
+		{
+			 "type": "origins:food_level",
+			"comparison": "<=",
+			"compare_to": 8
+		}
+		]
+    },
+	"name": "photosynthesis",
+	"description": "while under sun your food cannot fall below 4 hunger bars"
+}

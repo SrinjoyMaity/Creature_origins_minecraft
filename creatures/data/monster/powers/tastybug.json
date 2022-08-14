@@ -1,0 +1,36 @@
+{
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:spider_eye"
+        }
+    },
+    "food_modifier": {
+        "name": "Increased food points",
+        "operation": "addition",
+        "value": 2.0
+    },
+	"always_edible": true,
+	"prevent_effects": true,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:regeneration",
+					"duration": 100,
+					"amplifier": 1
+				}
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "monster:coldblooded_meter",
+				"change": 60
+			}
+		]
+	},
+	"name": "tasty bug",
+	"description": "eating a spider eye does not poison you istead it gives you regeneration. it also raises your heat by 60"
+}

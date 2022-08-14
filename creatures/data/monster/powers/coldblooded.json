@@ -1,0 +1,75 @@
+{	"type": "origins:multiple",
+	"meter": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 300,
+		"start_value": 300,
+		"hud_render": {
+			"should_render": true,
+			"bar_index": 7
+		},
+		"min_action": {
+			"type": "origins:and",
+			"actions":[
+				{
+					"type": "origins:damage",
+					"amount": 4,
+					"source": {
+						"name": "magic",
+						"bypasses_armor": true
+					}
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "monster:coldblooded_meter",
+					"change": 1
+				}
+			]
+		}
+	},
+	"heat":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "monster:coldblooded_meter",
+			"change": 1
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:brightness",
+			"comparison": ">=",
+			"compare_to": 0.5
+			
+		}
+	},
+	"drop":{
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "monster:coldblooded_meter",
+			"change": -1
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:brightness",
+				"comparison": "<",
+				"compare_to": 0.5
+				}	
+			]
+			
+		}
+	},
+	"respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:change_resource",
+		"resource": "monster:coldblooded_meter",
+		"change": 300
+    }
+	},
+	"name": "cold blooded",
+	"description": "staying in a light level of above 12 heats you up otherwise you cool down"
+}

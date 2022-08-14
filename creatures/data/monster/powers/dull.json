@@ -1,0 +1,9 @@
+{
+    "type": "origins:modify_xp_gain",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.5
+    },
+   "name": "Ignorant",
+	"description": "all you want to do is gallop around the sky, you gain less experience "
+}

@@ -1,0 +1,11 @@
+{
+	"type": "origins:attribute",
+	"modifier": {
+		"attribute": "minecraft:generic.max_health",
+		"operation": "addition",
+		"value": -6,
+		"name": "nine tailed fox health"
+	},
+	"name": "fox like body",
+	"description": "despite being a magical creature you have a body similar to a small fox having only 7 hearts"
+}

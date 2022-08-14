@@ -1,0 +1,77 @@
+{
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {
+			"key": "key.origins.secondary_active"
+		}
+	},
+	"sprint": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 3,
+		"max_stacks": 3,
+		"duration_per_stack": 10,
+    "effects": [
+        {
+            "effect": "minecraft:speed",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true,
+			"amplifier": 1
+        }
+		],
+		
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:sprintliz_toggle"
+		}
+	},
+	"reduce": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+		{
+			"type": "origins:change_resource",
+			"resource": "monster:coldblooded_meter",
+			"change": -3
+		},
+		{
+			"type": "origins:exhaust",
+			"amount": 0.5
+		}
+		]
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:sprintliz_toggle"
+		}
+	},
+	"off": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+		"type": "origins:toggle",
+		"power": "monster:sprintliz_toggle"    
+	},
+    "interval": 20,
+    "condition": {
+        "type": "origins:and",
+		"conditions": [
+		{
+			"type": "origins:power_active",
+			"power": "monster:sprintliz_toggle"
+		},
+		{
+			 "type": "origins:resource",
+			"resource": "monster:coldblooded_meter",
+			"comparison": "<=",
+			"compare_to": 75
+		}
+		]
+    }
+	},
+	"name": "sprinting lizard",
+	"description": "spend heat and food to gain massive speed, stops working when the heat falls under 25%"
+}

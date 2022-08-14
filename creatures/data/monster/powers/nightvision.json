@@ -1,0 +1,19 @@
+{
+	"type": "origins:multiple",
+	"vision": {
+		"type": "origins:toggle_night_vision",
+		"strength": 0.5,
+		"key": {
+			"key": "key.origins.secondary_active"
+		}
+	},
+	"meow": {
+    "type": "origins:self_action_on_kill",
+    "entity_action": {
+        "type": "origins:play_sound",
+    "sound": "minecraft:entity.cat.hiss"
+    }
+	},
+	"name": "cat vision",
+	"description": "you can see better in darkness"
+}

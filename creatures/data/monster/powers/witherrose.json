@@ -1,0 +1,31 @@
+{	
+	"type": "origins:multiple",
+	"craft": {
+    "type": "origins:recipe",
+    "recipe": {
+		"id": "wither_rose_crafting",
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            {
+                "item": "minecraft:poppy"
+            },
+            {
+                "item": "minecraft:soul_sand"
+            }
+        ],
+        "result": {
+            "item": "minecraft:wither_rose"
+        }
+    }
+	},
+	"pumpkin": {
+    "type": "origins:restrict_armor",
+    "head": {
+        "type": "origins:armor_value",
+        "comparison": "==",
+        "compare_to": 0
+    }
+	},
+"name": "True darkness",
+	"description": "as a being of true darkness you can craft wither rose with poppy and soul sand but you cannot wear a pumpkin head"
+}

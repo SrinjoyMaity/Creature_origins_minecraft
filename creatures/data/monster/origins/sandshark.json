@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"monster:burrow",
+		"monster:tremor",
+		"monster:exhaust",
+		"monster:pounce",
+		"monster:dig",
+		"monster:hydrophobia",
+		"origins:carnivore",
+		"monster:fivehealth",
+		"monster:firefall",
+		"monster:shieldless"
+	],
+	"icon": "minecraft:sand",
+	"order": 4,
+	"impact": 2,
+	"name": "Sand Shark",
+	"description": "A terror below the surface, you burrow around the desert looking for unsuspecting victims "
+}

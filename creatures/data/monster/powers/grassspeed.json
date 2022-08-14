@@ -1,0 +1,23 @@
+{
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 3,
+    "max_stacks": 6,
+    "duration_per_stack": 10,
+    "effects": [
+        {
+            "effect": "minecraft:speed",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+    "condition": {
+         "type": "origins:on_block",
+    "block_condition": {
+        "type": "origins:block",
+        "block": "minecraft:grass_block"
+    }
+	},
+	"name": "forest runner",
+	"description": "when on grass block you feel at home and are faster"
+}

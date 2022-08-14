@@ -1,0 +1,22 @@
+{
+	"type": "origins:multiple",
+	"wither": {
+		"type": "origins:effect_immunity",
+		"effects": [
+			"minecraft:wither"
+		]
+	},
+	"fangs": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "magic"
+		},
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -1
+		}
+	},
+	"name": "Self antidote",
+	"description": "you are completely immune to wither and magic damage"
+}

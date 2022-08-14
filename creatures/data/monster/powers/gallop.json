@@ -1,0 +1,49 @@
+{
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "key.origins.secondary_active"
+		}
+	},
+	"fall": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 2,
+		"max_stacks": 2,
+		"duration_per_stack": 10,
+		"effects": [
+        {
+            "effect": "minecraft:slow_falling",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+		],
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:gallop_toggle",
+			"inverted": true
+		}
+	},
+	"fly": {
+			"type": "origins:stacking_status_effect",
+		"min_stacks": 2,
+		"max_stacks": 2,
+		"duration_per_stack": 10,
+		"effects": [
+        {
+            "effect": "minecraft:levitation",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:gallop_toggle"
+		}
+	},
+	"name": "star gallop",
+	"description": "you can toggle between levitation and slow falling to kind of fly in the sky"
+}

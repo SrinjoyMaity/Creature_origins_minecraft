@@ -1,0 +1,9 @@
+{
+    "type": "origins:modify_swim_speed",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.5
+    },
+	"name": "not a duck",
+	"description": "your wings are not waterproof, you swim very slowly"
+}

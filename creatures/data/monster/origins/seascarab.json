@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"monster:sense",
+		"monster:weakshell",
+		"monster:gills",
+		"monster:enemies",
+		"monster:depth",
+		"monster:badappetite",
+		"monster:fried",
+		"monster:chopped"
+	],
+	"icon": "minecraft:nautilus_shell",
+	"order": 4,
+	"impact": 3,
+	"name": "Sea scarab",
+	"description": "Human-sized scarab-like sea monster that inhabit the ocean and underwater caves, they are responsible for several ship wrecks and quite deadly in groups "
+}

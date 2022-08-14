@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "origins": [
+    "monster:seascarab",
+	"monster:sandshark",
+	"monster:stellacorn",
+	"monster:silverwing",
+	"monster:ancientyeti",
+	"monster:basilisk",
+	"monster:ninetailfox",
+	"monster:hydravine",
+	"monster:nyandroid",
+	"monster:reboot"
+  ]
+}

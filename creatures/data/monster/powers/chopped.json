@@ -1,0 +1,34 @@
+{
+	"type": "origins:modify_damage_taken", 
+    "damage_condition": {
+		"type":"origins:and",
+		"conditions":
+		[
+			{
+				"type": "origins:attacker",
+				"entity_condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": 
+						{
+							"tag": "monster:axes"
+						}                                   
+					}                 
+				}
+			},
+			{
+				"type":"origins:projectile",
+				"inverted":true
+			}
+			
+		]
+	},
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.5
+		},
+	"name": "chopped",
+	"description": "You take 50% more damage from Axes."
+}

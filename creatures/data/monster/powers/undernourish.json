@@ -1,0 +1,19 @@
+{
+   "type": "origins:action_over_time",
+    "entity_action": {
+         "type": "origins:apply_effect",
+    "effect": {
+        "effect": "minecraft:nausea",
+        "duration": 200,
+        "amplifier": 1
+    }
+    },
+    "interval": 100,
+    "condition": {
+        "type": "origins:food_level",
+    "comparison": "<=",
+    "compare_to": 6
+    },
+	"name": "undernourished",
+	"description": "if you hunger falls below 3 , you get the nausea effect as you are undernourished"
+}

@@ -1,0 +1,38 @@
+{
+	"type": "origins:stacking_status_effect",
+    "min_stacks": -10,
+    "max_stacks": 3,
+    "duration_per_stack": 10,
+    "effects": [
+        {
+            "effect": "minecraft:hunger",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:and",
+				"conditions":[
+					{
+						"type": "origins:in_tag",
+						"tag": "monster:sandlike"
+						
+					},
+					{
+						"type": "origins:offset",
+						"condition": {
+							"type": "origins:in_tag",
+							"tag": "monster:sandlike"
+						},
+					"y": 1
+					}
+				]
+			},
+			"inverted":true
+		},
+	"name": "surface sickness",
+	"description": "outside burrowed form your body is unable to produce enough energy to carry your own weight therefore, you get more hungry "
+}

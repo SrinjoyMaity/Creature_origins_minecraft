@@ -1,0 +1,30 @@
+{
+	"type": "origins:multiple",
+	"dolphin":{
+	"type": "origins:self_action_on_kill",
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:dolphins_grace",
+			"duration": 200,
+			"amplifier": 1
+			
+		}
+				
+	},
+	"cooldown": 40,
+	"condition": {
+		"type": "origins:submerged_in",
+		"fluid": "minecraft:water"
+	}
+},
+"swim": {
+    "type": "origins:modify_swim_speed",
+    "modifier": {
+        "operation": "addition",
+        "value": 0.025
+    }
+},
+	"name": "the hunt",
+	"description": "while underwater you are relatively faster and gain dolphin's grace when you kill something"
+}

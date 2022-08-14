@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"monster:shootingstar",
+		"monster:gallop",
+		"monster:nightregen",
+		"monster:goldencarrots",
+		"monster:lightarmor",
+		"monster:witherfood",
+		"monster:pacifist",
+		"monster:dull",
+		"monster:starlike"
+		
+	],
+	"icon": "minecraft:nether_star",
+	"order": 4,
+	"impact": 2,
+	"name": "Stellacorn",
+	"description": "A celestial unicorn that gallops around at night and helps injured travellers  "
+}

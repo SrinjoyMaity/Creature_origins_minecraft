@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"monster:evokerfang",
+		"monster:immunity",
+		"monster:vines",
+		"monster:photosynth",
+		"origins:carnivore",
+		"monster:watermeter",
+		"monster:witherrose",
+		"monster:fuelwood",
+		"monster:breakable"
+	],
+	"icon": "minecraft:wither_rose",
+	"order": 4,
+	"impact": 3,
+	"name": "hydravine",
+	"description": "A monster made by combining dark magic and plants, this multi-headed creature is as dangerous as it looks. when fighting it always be careful of the ground below you"
+}

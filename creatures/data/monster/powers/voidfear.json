@@ -1,0 +1,23 @@
+{
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 3,
+    "max_stacks": 3,
+    "duration_per_stack": 10,
+    "effects": [
+        {
+            "effect": "minecraft:weakness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+    "condition": {
+		"type": "origins:on_block",
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "monster:nearvoid"
+		}	
+    },
+		"name": "fear of the void",
+	"description": "being close to the void scares you, you receive weakness on endstone, bedrock or deepslate"
+}

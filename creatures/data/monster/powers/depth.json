@@ -1,0 +1,43 @@
+{
+ "type": "origins:multiple",
+ "first":{
+	"type": "origins:stacking_status_effect",
+    "min_stacks": 5,
+    "max_stacks": 5,
+    "duration_per_stack": 10,
+    "effects": 
+        {
+            "effect": "minecraft:weakness",
+            "show_particles": false,
+            "show_icon": true
+        },
+
+	"condition": {
+    "type": "origins:brightness",
+    "comparison": ">=",
+    "compare_to": 0.7
+}
+	},
+ "second":{
+	"type": "origins:stacking_status_effect",
+    "min_stacks": 22,
+    "max_stacks": 22,
+    "duration_per_stack": 10,
+    "effects": 
+        {
+            "effect": "minecraft:strength",
+            "show_particles": false,
+            "show_icon": true
+        },
+		
+    "condition": {
+    "type": "origins:brightness",
+    "comparison": "==",
+    "compare_to": 0
+
+	}
+		
+	},
+	"name": "terror from the depths",
+	"description": "staying in an area with light level 0 gives you strength for 10 seconds while an area with light level above 13 gives you weakness"
+} 

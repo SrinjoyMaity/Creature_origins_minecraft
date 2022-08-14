@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"monster:wings",
+		"monster:steelnerves",
+		"monster:earlybird",
+		"monster:fragile",
+		"monster:lightarmor",
+		"monster:freshair",
+		"monster:slowswim",
+		"monster:inspire"
+		
+	],
+	"icon": "minecraft:feather",
+	"order": 4,
+	"impact": 1,
+	"name": "Silverwing",
+	"description": "A giant fast flying bird that is known to symbolize hope and rumoured to swoop down from skies to help warriors that they find worthy "
+}

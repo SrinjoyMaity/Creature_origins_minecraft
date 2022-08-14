@@ -1,0 +1,54 @@
+{
+	"type": "origins:multiple",
+	"veggie": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+		{
+			"type": "origins:or",
+			"conditions": [
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "origins:meat"
+				}
+			},
+			{
+				"type": "origins:meat"
+			}
+			]
+		},
+		{
+			"type": "origins:food"
+		},
+		{
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "origins:ignore_diet"
+			},
+			"inverted": true
+		}
+		]
+	}
+	},
+	"carrot": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:golden_carrot"
+			}
+		},
+		"entity_action": {
+		"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:absorption",
+				"duration": 100,
+				"amplifier": 0
+			}
+		}
+	},
+	"name": "canned food",
+	"description": "you can only eat vegetables but eating a golden carrot will give you absoption for small time "
+}

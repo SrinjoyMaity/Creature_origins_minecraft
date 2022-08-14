@@ -1,0 +1,33 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+		"type": "origins:and",
+		"conditions": [
+		{
+			"type": "origins:attacker"
+		},
+		{
+			"type": "origins:amount",
+			"comparison": "<=",
+			"compare_to": 6
+		}
+		]
+	},
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -1
+    },
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+		{
+			 "type": "origins:relative_health",
+			"comparison": "<",
+			"compare_to": 1,
+			"inverted" : true
+		}
+		]
+	},
+	"name": "resilient",
+	"description": "when on full health you completely negate damage from attackers dealing damage below 3 hearts"
+}

@@ -1,0 +1,128 @@
+{
+	"type": "origins:multiple",
+	"toggle": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "key.origins.secondary_active"
+		}
+	},
+	"phasing": {
+		"type": "origins:phasing",
+		"render_type": "blindness",
+		"view_distance": 5,
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "monster:sandlike"
+		},
+		"phase_down_condition": {
+			"type": "origins:and",
+			"conditions": [
+            {
+                "type": "origins:sneaking"
+            },
+            {
+                "type": "origins:on_block"
+            }
+			]
+		},
+		"condition": {
+			"type": "origins:power_active",
+			"power": "monster:burrow_toggle"
+		}
+	},
+	"tremor": {
+		"type": "origins:entity_glow",
+		"entity_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+				  "type": "origins:on_block",
+				  "block_condition": {
+					"type": "origins:in_tag",
+					"tag": "monster:sandlike"
+				  }
+				}
+			]
+		},
+		"condition": {
+				"type": "origins:and",
+			"conditions": [{
+				"type": "origins:power_active",
+				"power": "monster:burrow_toggle"
+				},
+				{
+				"type": "origins:in_block",
+				"block_condition": {
+					"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:in_tag",
+								"tag": "monster:sandlike"
+							},
+							{
+								"type": "origins:offset",
+								"condition": {
+									"type": "origins:in_tag",
+									"tag": "monster:sandlike"
+									},
+								"y": 1
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"suffo": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+				"type": "origins:name",
+				"name": "inWall"
+			},
+		"modifier": {
+		"operation": "addition",
+		"value": -1
+		}
+	},
+	"buff":{
+	"type": "origins:stacking_status_effect",
+    "min_stacks": 5,
+    "max_stacks": 5 ,
+    "duration_per_stack": 5,
+    "effects": [
+			{
+				"effect": "minecraft:speed",
+				 "show_particles": false,
+				"amplifier":2
+			},
+			{
+				"effect": "minecraft:resistance",
+				 "show_particles": false
+			}
+		],
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:and",
+				"conditions":[
+					{
+						"type": "origins:in_tag",
+						"tag": "monster:sandlike"
+					},
+					{
+						"type": "origins:offset",
+						"condition": {
+							"type": "origins:in_tag",
+							"tag": "monster:sandlike"
+						},
+					"y": 1
+					}
+				]
+			}
+		}
+	},
+		
+	"name": "burrow",
+	"description": "you can burrow into most shovelable blocks when fully submerged you gain speed and resistance but also blindness"
+}

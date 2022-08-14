@@ -1,0 +1,11 @@
+{
+	"type": "origins:attribute",
+	"modifier": {
+		"attribute": "minecraft:generic.max_health",
+		"operation": "addition",
+		"value": -6,
+		"name": "hydravine health"
+	},
+	"name": "breakable",
+	"description": "its easy to break through your branches, you have only 7 hearts"
+}

@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:deepslate",
+		"minecraft:cobbled_deepslate",
+		"minecraft:end_stone",
+		"minecraft:end_stone_bricks",
+		"minecraft:bedrock"
+	]
+}
